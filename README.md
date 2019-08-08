@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Provides a number os useful data types for day-to-day Python programming.
+Summary: Toolbox with useful Python classes and type magic.
 
 
 
