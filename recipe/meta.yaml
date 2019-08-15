@@ -1,5 +1,5 @@
 {% set name = "nr.types" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.4" %}
 
 package:
   name: "{{ name|lower }}"
