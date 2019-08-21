@@ -1,5 +1,5 @@
 {% set name = "nr.types" %}
-{% set version = "2.5.1" %}
+{% set version = "2.5.3" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "3ee4e96325bf70569773fa0d5c757678030193c8d8ae5258fa7c63bc7dc1fa6e"
+  sha256: "bc575b3d38b1ed194bdc4c3d70f83d8fc637a0a29c8c746ca3bff44c8a8a271d"
 
 build:
   noarch: python
