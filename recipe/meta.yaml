@@ -27,7 +27,10 @@ test:
   imports:
     - nr
     - nr.types
-    - nr.types._impl
+    - nr.types.collections
+    - nr.types.maps
+    - nr.types.structured
+    - nr.types.utils
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
