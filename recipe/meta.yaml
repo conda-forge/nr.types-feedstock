@@ -1,5 +1,5 @@
 {% set name = "nr.types" %}
-{% set version = "2.5.5" %}
+{% set version = "3.0.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "e54e390ac7497a43f44c3a7b68241645c0d116fdf79f213a20345210fcd0af5f"
+  sha256: "18e083324d77d74f889fd8ca6b57586a85157d8eb2b3930d04a67ab524e86c9a"
 
 build:
   noarch: python
@@ -27,7 +27,10 @@ test:
   imports:
     - nr
     - nr.types
-    - nr.types._impl
+    - nr.types.collections
+    - nr.types.maps
+    - nr.types.structured
+    - nr.types.utils
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
