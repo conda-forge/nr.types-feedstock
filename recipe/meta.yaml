@@ -26,12 +26,23 @@ requirements:
 
 test:
   imports:
-    - nr
     - nr.types
+    - nr.types.abc
     - nr.types.collections
-    - nr.types.maps
-    - nr.types.structured
-    - nr.types.utils
+    - nr.types.generic
+    - nr.types.interface
+    - nr.types.meta
+    - nr.types.persist
+    - nr.types.singletons
+    - nr.types.struct
+    - nr.types.stream
+    - nr.types.sumtype
+    - nr.types.utils.classdef
+    - nr.types.utils.funcdef
+    - nr.types.utils.function
+    - nr.types.utils.logging
+    - nr.types.utils.module
+    - nr.types.utils.typing
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
