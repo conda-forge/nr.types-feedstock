@@ -32,7 +32,10 @@ test:
     - nr.types.generic
     - nr.types.interface
     - nr.types.meta
-    - nr.types.persist
+    # We don't expect the persist module to be importable as it requires
+    # nr.fs, but it's intentionally not listed as a dependency (so users
+    # can actively decide to depend on nr.fs).
+    #- nr.types.persist
     - nr.types.singletons
     - nr.types.struct
     - nr.types.stream
