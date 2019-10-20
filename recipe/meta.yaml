@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "0a01cc2e29bc7df3925bbc7bcd8bddd171ff77d39fcd479a314ff751ca5989c8"
+  sha256: "f1f1b69b15897173797fd7674193450f6b25196e999c6a459d0ab294412d107a"
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - python
   run:
     - python
+    - deprecated
     - six
     - typing
 
