@@ -1,5 +1,5 @@
 {% set name = "nr.types" %}
-{% set version = "3.1.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "f1f1b69b15897173797fd7674193450f6b25196e999c6a459d0ab294412d107a"
+  sha256: "45c8f2a808da4f72bfa6a5735323725371054cb1d954792a67f4163f431b296f"
 
 build:
   noarch: python
@@ -26,12 +26,26 @@ requirements:
 
 test:
   imports:
-    - nr
     - nr.types
+    - nr.types.abc
     - nr.types.collections
-    - nr.types.maps
-    - nr.types.structured
-    - nr.types.utils
+    - nr.types.generic
+    - nr.types.interface
+    - nr.types.meta
+    # We don't expect the persist module to be importable as it requires
+    # nr.fs, but it's intentionally not listed as a dependency (so users
+    # can actively decide to depend on nr.fs).
+    #- nr.types.persist
+    - nr.types.singletons
+    - nr.types.struct
+    - nr.types.stream
+    - nr.types.sumtype
+    - nr.types.utils.classdef
+    - nr.types.utils.funcdef
+    - nr.types.utils.function
+    - nr.types.utils.logging
+    - nr.types.utils.module
+    - nr.types.utils.typing
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
