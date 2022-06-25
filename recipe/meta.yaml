@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - python
     - deprecated
+    - python >=3.6
     - six
     - typing
 
@@ -32,11 +32,14 @@ test:
     - nr.types.maps
     - nr.types.structured
     - nr.types.utils
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
   license: "MIT"
-  license_family: "MIT"
   license_file: "LICENSE.txt"
   summary: "Toolbox with useful Python classes and type magic."
 
