@@ -29,9 +29,6 @@ test:
     - nr
     - nr.types
     - nr.types.collections
-    - nr.types.maps
-    - nr.types.structured
-    - nr.types.utils
   commands:
     - pip check
   requires:
