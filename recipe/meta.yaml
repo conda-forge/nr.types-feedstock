@@ -29,8 +29,9 @@ test:
     - nr
     - nr.types
     - nr.types.collections
-  commands:
-    - pip check
+  # commands:
+    # Doesn't work together with the typing package
+    # - pip check
   requires:
     - pip
 
