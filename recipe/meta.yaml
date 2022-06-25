@@ -1,5 +1,5 @@
 {% set name = "nr.types" %}
-{% set version = "3.1.1" %}
+{% set version = "4.0.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,20 +7,20 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "f1f1b69b15897173797fd7674193450f6b25196e999c6a459d0ab294412d107a"
+  sha256: 6c44f37441cf5d563c9e0302dc2bc942b2a22d7a73ff18fa71f88017fa6254ef
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - python
     - deprecated
+    - python >=3.6
     - six
     - typing
 
@@ -29,14 +29,15 @@ test:
     - nr
     - nr.types
     - nr.types.collections
-    - nr.types.maps
-    - nr.types.structured
-    - nr.types.utils
+  # commands:
+    # Doesn't work together with the typing package
+    # - pip check
+  requires:
+    - pip
 
 about:
   home: "https://github.com/NiklasRosenstein/python-nr.types"
   license: "MIT"
-  license_family: "MIT"
   license_file: "LICENSE.txt"
   summary: "Toolbox with useful Python classes and type magic."
 
